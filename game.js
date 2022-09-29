@@ -6,7 +6,7 @@ let computerWins = 0;
 let roundPlayed = 0;
 
 function getUserChoice() {
-    let userChoiceTemp = prompt('Choose Rock, Paper or Scisor',);
+    let userChoiceTemp = prompt('Choose Rock, Paper or Scissor',);
     if (userChoiceTemp == null) {
         userChoice = 'end';
     } else {
@@ -14,7 +14,7 @@ function getUserChoice() {
         switch (userChoice) {
             case 'rock':
             case 'paper':
-            case 'scisor':
+            case 'scissor':
                 return userChoice;
                 break;
             default:
@@ -25,7 +25,7 @@ function getUserChoice() {
 }
 
 function getComputerChoice() {    
-    let computerChoiceTemp  = ['rock','paper','scisor'];
+    let computerChoiceTemp  = ['rock','paper','scissor'];
     let num = (Math.random() * ((3 - 0) + 0));
     let numRandom = Math.floor(num);
     computerChoice = computerChoiceTemp[numRandom];
@@ -42,14 +42,14 @@ function game() {
     
         if (userChoice == 'end') {
             roundPlayed = 5;  //end the game
-        } else if (userChoice == 'rock' && computerChoice == 'rock' || userChoice == 'paper' && computerChoice == 'paper' || userChoice == 'scisor' && computerChoice == 'scisor') {
+        } else if (userChoice == 'rock' && computerChoice == 'rock' || userChoice == 'paper' && computerChoice == 'paper' || userChoice == 'scissor' && computerChoice == 'scissor') {
             console.log("Round:"+(roundPlayed+1));
             console.log('User Choose: '+userChoice+' | Computer Choose: '+computerChoice)
             console.log('This round is a draw');
             console.log('User Wins: '+userWins+' | Computer Wins: '+computerWins);
             console.log('------------------------------------------------');
             roundPlayed++;
-        } else if (userChoice == 'rock' && computerChoice == 'scisor' || userChoice == 'paper' && computerChoice == 'rock' || userChoice == 'scisor' && computerChoice == 'rock') {
+        } else if (userChoice == 'rock' && computerChoice == 'scissor' || userChoice == 'paper' && computerChoice == 'rock' || userChoice == 'scissor' && computerChoice == 'rock') {
             console.log("Round:"+(roundPlayed+1));
             console.log('User Choose: '+userChoice+' | Computer Choose: '+computerChoice)
             console.log('Player Wins this round');
@@ -57,7 +57,7 @@ function game() {
             console.log('User Wins: '+userWins+' | Computer Wins: '+computerWins);
             console.log('------------------------------------------------');
             roundPlayed++;
-        } else if (userChoice == 'rock' && computerChoice == 'paper' || userChoice == 'paper' && computerChoice == 'scisor' || userChoice == 'scisor' && computerChoice == 'paper') {
+        } else if (userChoice == 'rock' && computerChoice == 'paper' || userChoice == 'paper' && computerChoice == 'scissor' || userChoice == 'scissor' && computerChoice == 'paper') {
             console.log("Round:"+(roundPlayed+1));
             console.log('User Choose: '+userChoice+' | Computer Choose: '+computerChoice)
             console.log('Computer Wins this round');
