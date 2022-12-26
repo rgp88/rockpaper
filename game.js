@@ -81,4 +81,3 @@ function gameOver() {
      }
      roundPlayed = 6;
 }
-game();
