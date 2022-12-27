@@ -81,3 +81,16 @@ function gameOver() {
      }
      roundPlayed = 6;
 }
+
+function borderGrey(class) {
+    document.querySelector(class).style.borderColor = "grey";
+};
+
+function borderBlack(e) {
+    e.stopPropagation();
+    this.style.borderColor = "";
+};
+
+const rock = document.querySelector(".rock");
+const paper = document.querySelector(".paper");
+const scissor = document.querySelector(".scissor");

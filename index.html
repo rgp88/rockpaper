@@ -21,7 +21,7 @@
     <div class="main">
         <div class="description" style="border-style: solid; text-align: center;">Game Description</div>
         <div class="inputs">
-        <div class="rock" style="border-style: solid;";>rock</div>
+        <div class="rock" style="border-style: solid;" onmousedown="changeColor()" onmouseup="this.style.borderColor=''">rock</div>
         <div class="paper" style="border-style: solid;">paper</div>
         <div class="scissor" style="border-style: solid;">scissor</div>
         </div>
@@ -46,5 +46,10 @@
 
 
     <script src="game.js"></script>
+    <script>
+        function changeColor() {
+            console.log(this.childNode);
+        }
+    </script>
 </body>
 </html>

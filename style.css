@@ -9,7 +9,7 @@ body {
 
 .header {
     background-color: rgba(0, 97, 92, 0.884);
-    height: 100px;
+    height: 70px;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -19,9 +19,6 @@ body {
 
 .footer {
     background-color: rgb(0, 61, 38);
-    bottom:0;
-    left:0;
-    right:0;
     height:auto;
     text-align: center;
     display: flex;
@@ -30,7 +27,6 @@ body {
     justify-content: center;
     color:aliceblue;
     padding: 15px;
-    position:fixed;
 
 }
 
@@ -59,7 +55,7 @@ body {
     border: 5px;
     border-style: solid;
     border-color: black;
-    flex-grow: 1;
+    flex: 1;
 }
 
 .description {
@@ -71,14 +67,13 @@ body {
     display: flex;
     justify-content: center;
     color: black;
-    height: 150px;
-    margin-top: 15px;
-    border-style: dashed;
+    height: 100px;
+    border-style: dashed;   
 } 
 
 .inputs div {
-    width: 150px;
-    margin: 0px 50px 0px 50px;
+    width: 100px;
+    margin: 0px 25px 0px 25px;
 }
 
 .compPick {
@@ -93,30 +88,28 @@ body {
 }
 
 .compChoice {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 
 
 .result {
     display: flex;
     margin-top: 15px;
+    justify-content: center;
 }
 
 .resultInfo {
     border-style: solid;
-    flex-grow: 1;
 }
 
 .resultScore {
     border-style: solid;
-    flex-grow: 1;
     display: flex;
     
 }
 
 .resultScoreUser, .resultScoreComp {
-    flex-grow: 1;
     height: 150px;
     border-style: solid;
     border-color: blue;
