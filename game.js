@@ -82,15 +82,30 @@ function gameOver() {
      roundPlayed = 6;
 }
 
-function borderGrey(class) {
-    document.querySelector(class).style.borderColor = "grey";
-};
-
-function borderBlack(e) {
-    e.stopPropagation();
-    this.style.borderColor = "";
-};
 
 const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissor = document.querySelector(".scissor");
+const input = document.querySelector(".input");
+   
+
+rock.addEventListener('click', ()=> {
+    setTimeout(function() {
+paper.parentElement.removeChild(paper);
+scissor.parentElement.removeChild(scissor);
+},1000)});
+
+
+paper.addEventListener('click', ()=> {
+    rock.parentElement.removeChild(rock);
+    scissor.parentElement.removeChild(scissor);
+    
+    });
+
+
+scissor.addEventListener('click', ()=> {
+    paper.parentElement.removeChild(paper);
+    rock.parentElement.removeChild(rock);
+    
+    });
+

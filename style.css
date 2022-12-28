@@ -114,3 +114,8 @@ body {
     border-style: solid;
     border-color: blue;
 }
+
+.rock img {
+    width: inherit;
+    height: inherit;
+}
