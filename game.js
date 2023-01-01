@@ -22,6 +22,9 @@ const main = document.querySelector(".main");
 const compPick = document.getElementById('compPick');
 
 roundBox.textContent = "Round Nr: "+roundPlayed;
+resultScoreUser2.textContent = "0";
+resultScoreComp2.textContent = "0";
+
 
 function getComputerChoice() {    
     let computerChoiceTemp  = ['rock','paper','scissor'];
@@ -33,8 +36,8 @@ function getComputerChoice() {
 
 function gameLogic() {
     if (userChoice == 'rock' && computerChoice == 'rock' || userChoice == 'paper' && computerChoice == 'paper' || userChoice == 'scissor' && computerChoice == 'scissor') {
-        userWins += 0.5;
-        computerWins += 0.5;
+        userWins += 1;
+        computerWins += 1;
         resultScoreUser2.textContent = userWins;
         resultScoreComp2.textContent = computerWins;
     } else if (userChoice == 'rock' && computerChoice == 'scissor' || userChoice == 'paper' && computerChoice == 'rock' || userChoice == 'scissor' && computerChoice == 'rock') {
@@ -46,15 +49,7 @@ function gameLogic() {
         resultScoreUser2.textContent = userWins;
         resultScoreComp2.textContent = computerWins;
     } 
-}
-
-function game() {
-
-    if (roundPlayed<=4) {
-        gameLogic();
-    } else if (roundPlayed==5) {
-        gameLogic();
-        roundPlayed++;
+    if (userWins>=5 || computerWins>=5) {
         setTimeout(() => {
         gameOver();
         input.parentElement.removeChild(input);
@@ -66,6 +61,13 @@ function game() {
         roundBox.textContent = "GAME OVER";
         }, 900);
     }
+}
+
+function game() {
+
+ 
+        gameLogic();
+ 
 }
 
 
@@ -83,7 +85,6 @@ function gameOver() {
    
 
 rock.addEventListener('click', ()=> {
-    if(roundPlayed<=5) {
     userChoice = 'rock';
     input.removeChild(paper);
     input.removeChild(scissor);
@@ -104,11 +105,10 @@ rock.addEventListener('click', ()=> {
         game();
         roundPlayed++;
     }
-    });
+    );
 
 
 paper.addEventListener('click', ()=> {
-    if(roundPlayed<=5) {
     userChoice = 'paper';
     input.removeChild(rock);
     input.removeChild(scissor);
@@ -129,10 +129,9 @@ paper.addEventListener('click', ()=> {
     game();
     roundPlayed++;
     }
-    });
+    );
 
 scissor.addEventListener('click', ()=> {
-    if(roundPlayed<=5) {
     userChoice = 'scissor';
     input.removeChild(paper);
     input.removeChild(rock);
@@ -153,7 +152,7 @@ scissor.addEventListener('click', ()=> {
     game();
     roundPlayed++;
     }
-    });
+    );
 
 
 const inputat = document.querySelectorAll(".inputat");
