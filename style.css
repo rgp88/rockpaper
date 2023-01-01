@@ -27,7 +27,7 @@ body {
     justify-content: center;
     color:aliceblue;
     padding: 15px;
-    margin-top: 30px;
+    margin-top: 50px;
 
 }
 
@@ -116,7 +116,7 @@ font-size: 30px;
 .compChoice {
     width: 100px;
     height: 100px;
-    background-color: rgb(144, 238, 222);
+    background-color: rgb(189, 248, 238);
 }
 
 

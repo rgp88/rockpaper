@@ -63,6 +63,7 @@ function game() {
         resetButton.textContent = "Click Here!";
         resetButton.classList.add("reset")
         main.insertBefore(resetButton,description.nextSibling)
+        roundBox.textContent = "GAME OVER";
         }, 900);
     }
 }
