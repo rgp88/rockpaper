@@ -27,6 +27,7 @@ body {
     justify-content: center;
     color:aliceblue;
     padding: 15px;
+    margin-top: 30px;
 
 }
 
@@ -79,6 +80,7 @@ body {
     width: 100px;
     height: 100px;
     margin: 0px 25px 0px 25px;
+    background-color: rgb(144, 238, 222);
 }
 
 .compPick {
@@ -97,6 +99,7 @@ body {
 .compChoice {
     width: 100px;
     height: 100px;
+    background-color: rgb(144, 238, 222);
 }
 
 
@@ -104,10 +107,15 @@ body {
     display: flex;
     margin-top: 15px;
     justify-content: center;
+    
 }
 
 .resultInfo {
     /* border-style: solid; */
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .resultScore {
@@ -118,8 +126,9 @@ body {
 
 .resultScoreUser, .resultScoreComp {
     height: 150px;
-    /* border-style: solid; */
-    border-color: blue;
+    border-style: solid;
+    margin: 0px 15px 0px 15px;
+    width: 200px;
 }
 
 .rock img, .paper img, .scissor img , #compPick{

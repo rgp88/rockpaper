@@ -14,6 +14,8 @@ function getComputerChoice() {
     return computerChoice;
 }
 
+const resultInfo = document.querySelector(".resultInfo");
+
 function gameLogic() {
     if (userChoice == 'rock' && computerChoice == 'rock' || userChoice == 'paper' && computerChoice == 'paper' || userChoice == 'scissor' && computerChoice == 'scissor') {
         console.log("Round:"+(roundPlayed));
@@ -50,11 +52,11 @@ function game() {
 function gameOver() {
     console.log('game over')
     if (userWins>computerWins) {
-        console.log('You are the winner');
+        resultInfo.textContent = ('You are the winner');
      } else if (userWins===computerWins) {
-        console.log('No Winner, this game was a tie');
+        resultInfo.textContent = ('No Winner, this game was a tie');
      } else {
-        console.log("Computer WINS");
+        resultInfo.textContent = ("Computer WINS");
      }
      roundPlayed = 6;
 }
@@ -130,3 +132,14 @@ scissor.addEventListener('click', ()=> {
     roundPlayed++;
     });
 
+
+const inputat = document.querySelectorAll(".inputat");
+
+inputat.forEach(itemi => {
+    itemi.addEventListener('mousedown', ()=> {
+        itemi.style.backgroundColor = "green";
+    itemi.addEventListener('mouseup', ()=> {
+        itemi.style.backgroundColor = "";
+    })
+    })
+});
