@@ -19,17 +19,23 @@
             </div>
     </header>
     <div class="main">
-        <div class="description" style="border-style: solid; text-align: center;">Game Description</div>
+        <div class="description" >Pick one:</div>
         <div class="inputs">
-        <div class="rock" style="border-style: solid;" onmousedown="this.style.borderColor='grey'" onmouseup="this.style.borderColor=''">
-        <img src="pic/—Pngtree—gray rock clip art_5830714.png" alt="rock">
+            <div class="rock" style="border-style: solid;" onmousedown="this.style.borderColor='grey'" onmouseup="this.style.borderColor=''">
+                <img src="pic/rock.png" alt="rock">
+            </div>
+            <div class="paper" style="border-style: solid;" onmousedown="this.style.borderColor='grey'" onmouseup="this.style.borderColor=''">
+                <img src="pic/paper.png" alt="paper">
+            </div>
+            <div class="scissor" style="border-style: solid;" onmousedown="this.style.borderColor='grey'" onmouseup="this.style.borderColor=''">
+                <img src="pic/scissor.png" alt="scissor">
+            </div>
         </div>
-        <div class="paper" style="border-style: solid;"onmousedown="this.style.borderColor='grey'" onmouseup="this.style.borderColor=''">paper</div>
-        <div class="scissor" style="border-style: solid;"onmousedown="this.style.borderColor='grey'" onmouseup="this.style.borderColor=''">scissor</div>
-        </div>
-        <div class="compPick" style="border-style: solid;">
-            <div class="compInfo" style="border-style: solid;">Computer Picks:</div>
-            <div class="compChoice" style="border-style: solid;">Computer Choice</div>
+        <div class="compPick">
+            <div class="compInfo">Computer Picks:</div>
+            <div class="compChoice" style="border-style: solid;">
+            <img src="pic/thinking.png" alt="Computer Choice" id="compPick">
+            </div>
         </div>
         <div class="result" style="border-style: solid;">
             <div class="resultInfo">Result Info:</div>
@@ -37,7 +43,7 @@
                 <div class="resultScoreUser">Result Score User:</div>
                 <div class="resultScoreComp">Result Score Computer:</div>
             </div>
-            
+                
         </div>
     </div>
     <footer class="footer">
