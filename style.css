@@ -57,6 +57,16 @@ body {
     /* border-style: solid; */
     border-color: black;
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.roundBox {
+display: flex;
+align-items: center;
+font-size: 30px;
 }
 
 .description {
@@ -76,11 +86,18 @@ body {
     /* border-style: dashed;    */
 } 
 
-.inputs div {
+.inputs div, .reset{
     width: 100px;
     height: 100px;
     margin: 0px 25px 0px 25px;
     background-color: rgb(144, 238, 222);
+    border-style: solid;
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .compPick {
@@ -116,6 +133,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 50px;
 }
 
 .resultScore {
@@ -124,11 +142,16 @@ body {
     
 }
 
-.resultScoreUser, .resultScoreComp {
+.resultScoreUser, .resultScoreComp{
     height: 150px;
     border-style: solid;
     margin: 0px 15px 0px 15px;
     width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 .rock img, .paper img, .scissor img , #compPick{
@@ -141,3 +164,12 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.resultScoreUser2, .resultScoreComp2{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
